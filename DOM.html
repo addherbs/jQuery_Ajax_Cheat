@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+
+<title> Here is the testing part</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<style>
+  .special{
+    color: red;
+  }
+</style>
+
+<body>
+
+<ul class="lists">
+  <li> One  </li>
+  <li class="special"> Two  </li>
+  <li> Three  </li>
+  <li>
+    <ul class="sub-list">
+      <li> 1  </li>
+      <li > 2  </li>
+      <li> 3  </li>
+    </ul>
+  </li>
+
+</ul>
+
+<script>
+
+$(document).ready(function(){
+
+  // $("li").on("click", function(){
+  //   $(this).next().hide();
+  // });
+
+  // $("li").on("click", function(){
+  //   $(this).siblings().remove();
+  // });
+
+  // $("li").on("click", function(){
+  //   $(this).removeClass("special");
+  //   $(this).siblings().addClass("special");
+  // });
+
+  // $(".lists").on("click", function(){
+  //   $(this).find("li").filter(":first").addClass("special");
+  // });
+
+  // $(".lists").on("click", function(){
+  //   $(this).find("li").filter(".special").remove();
+  // });
+
+
+  // $("li").on("click", function(){
+  //   $(this).hide();
+  //   if($(this).is(".special")){
+  //     alert("Hey this list element is special");
+  //   }
+  // });
+
+  $("li").on("click", function(){
+    console.log("This is not a sublist");
+    if($(this).parent().is(".sub-list")){
+      $(this).hide();
+    }
+
+  });
+
+
+});
+
+</script>
+
+</body>
+</html>

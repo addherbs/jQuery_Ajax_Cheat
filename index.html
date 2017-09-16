@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<title> Here is the testing part</title>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<body>
+
+<h1>My First Heading</h1>
+<p>My first paragraph.</p>
+
+<h1>This is heading 1</h1>
+<h2>This is heading 2</h2>
+<h3>This is heading 3</h3>
+
+<button  class= "button-reflect" id="h1"> First Header  </button>
+<button  class= "button-reflect" id="h2"> Second Header  </button>
+<button  class= "button-reflect" id="h3"> Third Header  </button>
+<button  class= "button-reflect" id="p"> Paragraph  </button>
+
+<script>
+$(document).ready(function(){
+  //$("p").toggle(1000).toggle(1000);
+  //$("h1").hide(300).show(300).hide(300).show(300);
+  //$("h2").slideUp(1000).slideDown(1000);
+  // $("h2").fadeOut(1000).delay(400).toggle(1000);
+
+  // $("h3").css({
+  //   color:"red",
+  //   fontWeight:"bold"
+  //   display:"none"
+  // });
+
+  // $("p").hide();
+  // $("h2").css({
+  //   opacity:"0.5"
+  // });
+
+  //How to rewrite html
+  //$("#testButton").html("My Button");
+
+  //How to make website dynamic, but very lengthy
+  // $("#testButton").on("click", function(){
+  //   $("p").slideToggle(1000);
+  // });
+
+
+  //How to write smarter code with classes
+  $(".button-reflect").on("click", function(){
+    var getID = $(this).attr("id");
+    $(getID).toggle();
+  });
+
+
+
+
+
+
+});
+</script>
+
+</body>
+</html>
